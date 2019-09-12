@@ -1,9 +1,9 @@
 /* Stylesheet */
 
-html {
+/*html {
     height: 100vh;
     width: 100vw;
-}
+}*/
 
 article {
     text-align: center;
@@ -54,4 +54,12 @@ article {
     border-radius: 50%;
     color: rgb(126, 236, 255);
     background-color: white;
+}
+
+
+img {
+    height: 50px;
+    position: relative;
+    top: 3px;
+    left: 1.5px;
 }

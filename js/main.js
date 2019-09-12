@@ -12,6 +12,7 @@ function page1() {
     click.setAttribute('style', 'visibility: hidden;');
     inst.innerHTML = '';
     btn.innerHTML = 'GO';
+    btn.setAttribute('style', 'padding: 30px;');
 }
 
 function page2() {
@@ -19,42 +20,44 @@ function page2() {
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
     inst.innerHTML = 'When you have your number, click next';
-    btn.innerHTML = 'rst'; // Insert reset icon
+    addResetIcon();
 }
 
 function page3() {
     text.innerHTML = 'Add both digits together to get a new number';
-    text.setAttribute('style', 'font-size: 55px;');
+    text.setAttribute('style', 'font-size: 45px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
     inst.innerHTML = 'Ex. 25 is 2 + 5 = 7 <br> Click next to proceed';
-    btn.innerHTML = 'rst'; // Insert reset icon
+    addResetIcon();
 }
 
 function page4() {
-    text.innerHTML = 'Subtract your new number from the orignal number';
-    text.setAttribute('style', 'font-size: 50px;');
+    text.innerHTML = 'Subtract your new number from the original number';
+    text.setAttribute('style', 'font-size: 45px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
     inst.innerHTML = 'Ex. 25 - 7 = 18 <br> Click next to proceed';
-    btn.innerHTML = 'rst'; // Insert reset icon
+    addResetIcon();
 }
 
 function page5() {
-    text.innerHTML = 'insert symbols'; // Set the overflow to scroll
-    text.setAttribute('style', 'max-height: 350px;'); // Sets the max height to allow scrolling
-    text.setAttribute('style', 'overflow: scroll;')
+    text.innerHTML = symbols(100);
+    text.setAttribute('style', 'font-size: 45px;');
+    text.setAttribute('style', 'max-height: 250px;'); // Sets the max height to allow scrolling
+    text.setAttribute('style', 'text-align: center;');
+    // text.setAttribute('style', 'overflow: scroll;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'REVEAL';
     inst.innerHTML = 'Find your new number <br> Note the symbol beside the number';
-    btn.innerHTML = 'rst'; // Insert reset icon
+    addResetIcon();
 }
 
 function page6() {
     text.innerHTML = '#';
     click.setAttribute('style', 'visibility: hidden;');
     inst.innerHTML = 'Your symbol is: #';
-    btn.innerHTML = 'rst'; // Insert reset icon
+    addResetIcon();
 }
 
 function clickNext() {
@@ -72,7 +75,23 @@ function clickReset() {
         btn.setAttribute('class', 'go');
         checkPage(page);
     }
-    
+}
+
+function addResetIcon() {
+    btn.innerHTML = ' <img src="../img/undo-solid.svg" alt="reset">';
+    btn.setAttribute('style', 'padding: 20px;');
+}
+
+function symbols(x) {
+    let output = ''; // Making sure that output = a string
+    for (i = 1; i <= x; i++) {
+        if (i < x) {
+            let num = i;
+            let sym = ['=', '@', '*', '$', '%', '^', '&', '+', '#'];
+            output += `${num} - ${sym[(i - 1) % 9]}<br>`; // subtract 1 because arrays count from 0
+        } 
+    }
+    return output;
 }
 
 function checkPage(pageNum) {
@@ -98,3 +117,11 @@ function checkPage(pageNum) {
 
 click.addEventListener('click', clickNext);
 btn.addEventListener('click', clickReset);
+
+
+/*
+Icons from Font Awesome
+Licensed under Creative Commons 4.0 International license
+Link to license: https://fontawesome.com/license
+I made no changes to the icons
+*/
