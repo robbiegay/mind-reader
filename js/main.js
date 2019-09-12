@@ -6,6 +6,7 @@ let inst = document.querySelector('.inst');
 let btn = document.querySelector('.go');
 
 let page = 1;
+let finalAns; // The final string output
 
 function page1() {
     text.innerHTML = 'I can read your mind';
@@ -45,6 +46,7 @@ function page4() {
 
 function page5() {
     text.innerHTML = symbols(100);
+    finalAns = text.textContent.slice(44, 45); // Gets the final symbol answer
     text.setAttribute('style', 'font-size: 45px;');
     text.setAttribute('style', 'max-height: 250px;'); // Sets the max height to allow scrolling
     text.setAttribute('style', 'text-align: center;');
@@ -56,10 +58,10 @@ function page5() {
 }
 
 function page6() {
-    text.innerHTML = '#';
+    text.innerHTML = finalAns;
     text.setAttribute('style', 'font-size: 100px;');
     click.setAttribute('style', 'visibility: hidden;');
-    inst.innerHTML = 'Your symbol is: #';
+    inst.innerHTML = `Your symbol is: ${finalAns}`;
     addResetIcon();
 }
 
@@ -86,13 +88,17 @@ function addResetIcon() {
 }
 
 function symbols(x) {
-    let output = ''; // Making sure that output = a string
+    let output = '';
+    let sym = [];
+    let symChar = ['=', '@', '*', '$', '%', '^', '&', '+', '#'];
+    for (i = 0; i < 9; i++) {
+        let rand = (Math.floor(Math.random() * (9 - (9 - symChar.length)))); // rand num 0 - length of array
+        sym.push(symChar[rand]) // push into array
+        symChar.splice(rand, 1); // delete that symbol from array
+    }
     for (i = 1; i <= x; i++) {
-        if (i < x) {
-            let num = i;
-            let sym = ['=', '@', '*', '$', '%', '^', '&', '+', '#'];
-            output += `${num} - ${sym[(i - 1) % 9]}<br>`; // subtract 1 because arrays count from 0
-        } 
+        let num = i;
+        output += `${num} - ${sym[(i - 1) % 9]}<br>`; // subtract 1 because arrays count from 0
     }
     return output;
 }
