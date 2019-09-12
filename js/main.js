@@ -24,17 +24,19 @@ function page2() {
 
 function page3() {
     text.innerHTML = 'Add both digits together to get a new number';
+    text.setAttribute('style', 'font-size: 55px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
-    inst.innerHTML = 'Ex. 25 is 2 + 5 = 7 click next to proceed';
+    inst.innerHTML = 'Ex. 25 is 2 + 5 = 7 <br> Click next to proceed';
     btn.innerHTML = 'rst'; // Insert reset icon
 }
 
 function page4() {
     text.innerHTML = 'Subtract your new number from the orignal number';
+    text.setAttribute('style', 'font-size: 50px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
-    inst.innerHTML = 'Ex. 25 - 7 = 18 click next to proceed';
+    inst.innerHTML = 'Ex. 25 - 7 = 18 <br> Click next to proceed';
     btn.innerHTML = 'rst'; // Insert reset icon
 }
 
@@ -44,7 +46,7 @@ function page5() {
     text.setAttribute('style', 'overflow: scroll;')
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'REVEAL';
-    inst.innerHTML = 'Find your new number Note the symbol beside the number';
+    inst.innerHTML = 'Find your new number <br> Note the symbol beside the number';
     btn.innerHTML = 'rst'; // Insert reset icon
 }
 
