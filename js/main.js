@@ -96,7 +96,7 @@ function symbols(x) {
         sym.push(symChar[rand]) // push into array
         symChar.splice(rand, 1); // delete that symbol from array
     }
-    for (i = 1; i <= x; i++) {
+    for (i = 1; i < x; i++) {
         let num = i;
         output += `${num} - ${sym[(i - 1) % 9]}<br>`; // subtract 1 because arrays count from 0
     }
