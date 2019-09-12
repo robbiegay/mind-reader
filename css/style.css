@@ -1,1 +1,49 @@
 /* Stylesheet */
+
+article {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.text {
+    font-size: 70px;
+    text-align: center;
+    margin: 20%;
+    height: 75%;
+    color: rgb(80, 80, 80);
+}
+
+.click, .btn {
+    display: inline-block;
+}
+
+.click {
+    font-size: 40px;
+    background-color: rgb(126, 236, 255);
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80%;
+    color: white;
+}
+
+.inst {
+    font-size: 30px;
+    color: rgb(126, 236, 255);
+    /*background-color: red;*/
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.btn {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid black;
+    font-size: 30px;
+    padding: 30px;
+    border-radius: 50%;
+    color: rgb(126, 236, 255);
+    background-color: white;
+}
