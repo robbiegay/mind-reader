@@ -46,7 +46,7 @@ function page4() {
 
 function page5() {
     text.innerHTML = symbols(100);
-    finalAns = text.textContent.slice(44, 45); // Gets the final symbol answer
+    finalAns = text.textContent.slice(49, 50); // Gets the final symbol answer
     text.setAttribute('style', 'font-size: 45px;');
     text.setAttribute('style', 'max-height: 250px;'); // Sets the max height to allow scrolling
     text.setAttribute('style', 'text-align: center;');
@@ -96,9 +96,9 @@ function symbols(x) {
         sym.push(symChar[rand]) // push into array
         symChar.splice(rand, 1); // delete that symbol from array
     }
-    for (i = 1; i < x; i++) {
+    for (i = 0; i < x; i++) {
         let num = i;
-        output += `${num} - ${sym[(i - 1) % 9]}<br>`; // subtract 1 because arrays count from 0
+        output += `${num} - ${sym[(i) % 9]}<br>`; // subtract 1 because arrays count from 0
     }
     return output;
 }
