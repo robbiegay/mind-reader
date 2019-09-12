@@ -81,7 +81,7 @@ function clickReset() {
 }
 
 function addResetIcon() {
-    btn.innerHTML = ' <img src="../img/undo-solid.svg" alt="reset">';
+    btn.innerHTML = ' <../img src="../img/undo-solid.svg" alt="reset">';
     btn.setAttribute('style', 'padding: 20px;');
 }
 
