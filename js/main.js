@@ -9,6 +9,7 @@ let page = 1;
 
 function page1() {
     text.innerHTML = 'I can read your mind';
+    text.setAttribute('style', 'font-size: 60px;');
     click.setAttribute('style', 'visibility: hidden;');
     inst.innerHTML = '';
     btn.innerHTML = 'GO';
@@ -17,6 +18,7 @@ function page1() {
 
 function page2() {
     text.innerHTML = 'Pick a number from 01-99';
+    text.setAttribute('style', 'font-size: 50px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
     inst.innerHTML = 'When you have your number, click next';
@@ -55,6 +57,7 @@ function page5() {
 
 function page6() {
     text.innerHTML = '#';
+    text.setAttribute('style', 'font-size: 100px;');
     click.setAttribute('style', 'visibility: hidden;');
     inst.innerHTML = 'Your symbol is: #';
     addResetIcon();
