@@ -53,7 +53,7 @@ function page5() {
     text.setAttribute('style', 'margin: 10px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'REVEAL';
-    inst.innerHTML = 'Find your new number <br> Note the symbol beside the number';
+    inst.innerHTML = 'Scroll to find your new number <br> Note the symbol beside the number';
     addResetIcon();
 }
 
