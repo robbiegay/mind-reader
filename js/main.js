@@ -48,7 +48,7 @@ function page5() {
     text.setAttribute('style', 'font-size: 45px;');
     text.setAttribute('style', 'max-height: 250px;'); // Sets the max height to allow scrolling
     text.setAttribute('style', 'text-align: center;');
-    // text.setAttribute('style', 'overflow: scroll;');
+    text.setAttribute('style', 'margin: 10px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'REVEAL';
     inst.innerHTML = 'Find your new number <br> Note the symbol beside the number';
@@ -81,7 +81,7 @@ function clickReset() {
 }
 
 function addResetIcon() {
-    btn.innerHTML = ' <img src="img/undo-solid.svg" alt="reset">'; // removed ../
+    btn.innerHTML = ' <img src="../img/undo-solid.svg" alt="reset">';
     btn.setAttribute('style', 'padding: 20px;');
 }
 
