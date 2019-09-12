@@ -14,11 +14,12 @@ article {
     color: rgb(80, 80, 80);
 }
 
-.click, .btn {
+.click, .go {
     display: inline-block;
 }
 
 .click {
+    visibility: hidden;
     font-size: 40px;
     background-color: rgb(126, 236, 255);
     border: 1px solid black;
@@ -36,7 +37,7 @@ article {
     margin-right: 10%;
 }
 
-.btn {
+.go, .reset {
     position: fixed;
     right: 15px;
     bottom: 15px;
