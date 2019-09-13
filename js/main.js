@@ -31,16 +31,16 @@ function page3() {
     text.setAttribute('style', 'font-size: 45px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
-    inst.innerHTML = 'Ex. 25 is 2 + 5 = 7 <br> Click next to proceed';
+    inst.innerHTML = 'Ex: 25 is 2 + 5 = 7<br>Ex: 05 is 0 + 5 = 5<br>Click next to proceed';
     addResetIcon();
 }
 
 function page4() {
-    text.innerHTML = 'Subtract your new number from the original number';
+    text.innerHTML = 'Subtract your new number from your old number';
     text.setAttribute('style', 'font-size: 45px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'NEXT';
-    inst.innerHTML = 'Ex. 25 - 7 = 18 <br> Click next to proceed';
+    inst.innerHTML = 'Ex: 25 - 07 = 18 <br>Ex: 05 - 05 = 0 <br>Click next to proceed';
     addResetIcon();
 }
 
@@ -53,7 +53,7 @@ function page5() {
     text.setAttribute('style', 'margin: 10px;');
     click.setAttribute('style', 'visibility: visible;');
     click.innerHTML = 'REVEAL';
-    inst.innerHTML = 'Scroll to find your new number <br> Note the symbol beside the number';
+    inst.innerHTML = 'Scroll to find the result of the previous equation.<br>Note the symbol beside the result.';
     addResetIcon();
 }
 
