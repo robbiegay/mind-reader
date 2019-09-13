@@ -134,3 +134,7 @@ Licensed under Creative Commons 4.0 International license
 Link to license: https://fontawesome.com/license
 I made no changes to the icons
 */
+
+
+
+// Pages 3, 4, 5 = need some resizing
